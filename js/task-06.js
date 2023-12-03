@@ -13,16 +13,17 @@ create.addEventListener("click", () => {
 
 function createBoxes(amount) {
   let w = 30;
+  let divElements = [];
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
-    w += 10 * i;
+    w += 10;
     div.style.width = `${w}px`;
     div.style.height = `${w}px`;
-    boxes.appendChild(div);
+    divElements.push(div);
   }
+  boxes.append(...divElements);
 }
-
 destroy.addEventListener("click", () => {
   destroyBoxes();
 });
