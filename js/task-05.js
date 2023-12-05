@@ -4,9 +4,10 @@ const color = document.querySelector(".color");
 changeColor.addEventListener("click", backgroundcolor);
 
 function backgroundcolor() {
-  document.body.style.backgroundColor = getRandomHexColor();
-  color.textContent = getRandomHexColor();
-  color.style.color = getRandomHexColor();
+  const colorNew = getRandomHexColor();
+  document.body.style.backgroundColor = colorNew;
+  color.textContent = colorNew;
+  color.style.color = colorNew;
 }
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
